@@ -17,7 +17,7 @@
         <!-- valeurs -->
         <Label x:Name="date" Content="Jamais" HorizontalAlignment="Left" Margin="219,121,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial Narrow" FontSize="22" FontWeight="Normal" FontStyle="Normal"/>
         <Label x:Name="espace" Content="??? Mb" HorizontalAlignment="Left" Margin="219,81,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial Narrow" FontSize="22" FontWeight="Normal" FontStyle="Normal"/>
-        <Button Content="ANALYSER" HorizontalAlignment="Left" Margin="696,45,0,0" VerticalAlignment="Top" Height="86" Width="236" Background="#FF007791" BorderBrush="White" BorderThickness="6,6,6,6" FontFamily="Arial Narrow" FontSize="30" FontWeight="Bold" Foreground="White"/>
+        <Button Content="ANALYSER" HorizontalAlignment="Left" Margin="696,45,0,0" VerticalAlignment="Top" Height="86" Width="236" Background="#FF007791" BorderBrush="White" BorderThickness="6,6,6,6" FontFamily="Arial Narrow" FontSize="30" FontWeight="Bold" Foreground="White" Click="Button_Analyser_Click"/>
 
         <!-- content -->
         <Button Content="&#xA;&#xD;&#xA;NETTOYER" HorizontalAlignment="Left" Margin="49,215,0,0" VerticalAlignment="Top" Height="150" Width="400" Background="#FF007791" BorderBrush="White" BorderThickness="6,6,6,6" FontFamily="Arial Narrow" FontSize="30" FontWeight="Bold" Foreground="White" Click="Button_Nettoyer_Click"/>

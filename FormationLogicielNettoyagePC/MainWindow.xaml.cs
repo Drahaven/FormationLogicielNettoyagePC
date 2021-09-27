@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,12 +22,22 @@ namespace FormationLogicielNettoyagePC
     /// </summary>
     public partial class MainWindow : Window
     {
+        public DirectoryInfo winTemp;
+        public DirectoryInfo appTemp;
+
         public MainWindow()
         {
             InitializeComponent();
+            winTemp = new DirectoryInfo(@"C:\Windows\Temp");
+            appTemp = new DirectoryInfo(System.IO.Path.GetTempPath());
         }
 
-        #region Clique boutons
+        //calcul taille dossier
+        public long DirSize(DirectoryInfo dir)
+        {
+            return dir.GetFiles().Sum(fi => fi.Length) + dir.GetDirectories().Sum(di => DirSize(di));
+        }
+
         private void Button_Nettoyer_Click(object sender, RoutedEventArgs e)
         {
 
@@ -41,7 +52,7 @@ namespace FormationLogicielNettoyagePC
         {
             try
             {
-                Process.Start(new ProcessStartInfo("https://github.com/Drahaven")
+                Process.Start(new ProcessStartInfo("https://github.com/Drahaven/FormationLogicielNettoyagePC")
                 {
                     UseShellExecute = true
                 });
@@ -55,6 +66,10 @@ namespace FormationLogicielNettoyagePC
         {
             MessageBox.Show("TODO : Créer page d'historique", "Historique", MessageBoxButton.OK, MessageBoxImage.Information);
         }
-        #endregion
+
+        private void Button_Analyser_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
