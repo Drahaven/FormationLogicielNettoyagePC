@@ -1,0 +1,41 @@
+﻿<Window x:Class="FormationLogicielNettoyagePC.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FormationLogicielNettoyagePC"
+        mc:Ignorable="d"
+        x:Name="fenetre"
+        Title="Logiciel nettoyage" Height="700" Width="1000" ResizeMode="NoResize" Icon="/1055018_brush_paint_paint brush_icon.ico" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <!-- header -->
+        <Rectangle HorizontalAlignment="Center" Height="175" Stroke="Black" VerticalAlignment="Top" Width="1000" Fill="#FF007791" StrokeThickness="0"/>
+        <!-- titres -->
+        <Label x:Name="titre" Content="Analyse du PC nécessaire" HorizontalAlignment="Left" Margin="49,25,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial Narrow" FontSize="40" FontWeight="Bold"/>
+        <Label Content="Espace à nettoyer :" HorizontalAlignment="Left" Margin="49,81,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial Narrow" FontSize="22" FontWeight="Bold"/>
+        <Label Content="Dernière analyse :" HorizontalAlignment="Left" Margin="49,121,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial Narrow" FontSize="22" FontWeight="Bold"/>
+        <!-- valeurs -->
+        <Label x:Name="date" Content="Jamais" HorizontalAlignment="Left" Margin="219,121,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial Narrow" FontSize="22" FontWeight="Normal" FontStyle="Normal"/>
+        <Label x:Name="espace" Content="??? Mb" HorizontalAlignment="Left" Margin="219,81,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial Narrow" FontSize="22" FontWeight="Normal" FontStyle="Normal"/>
+        <Button Content="ANALYSER" HorizontalAlignment="Left" Margin="696,45,0,0" VerticalAlignment="Top" Height="86" Width="236" Background="#FF007791" BorderBrush="White" BorderThickness="6,6,6,6" FontFamily="Arial Narrow" FontSize="30" FontWeight="Bold" Foreground="White"/>
+
+        <!-- content -->
+        <Button Content="&#xA;&#xD;&#xA;NETTOYER" HorizontalAlignment="Left" Margin="49,215,0,0" VerticalAlignment="Top" Height="150" Width="400" Background="#FF007791" BorderBrush="White" BorderThickness="6,6,6,6" FontFamily="Arial Narrow" FontSize="30" FontWeight="Bold" Foreground="White" Click="Button_Nettoyer_Click"/>
+        <Image HorizontalAlignment="Left" Height="83" Margin="219,237,0,0" VerticalAlignment="Top" Width="73" Source="/icons8-brush-64.png" RenderTransformOrigin="0.546,1.103" IsHitTestVisible="False"/>
+        <Button Content="&#xA;&#xD;&#xA;HISTORIQUE" HorizontalAlignment="Left" Margin="49,398,0,0" VerticalAlignment="Top" Height="150" Width="400" Background="#FF007791" BorderBrush="White" BorderThickness="6,6,6,6" FontFamily="Arial Narrow" FontSize="30" FontWeight="Bold" Foreground="White" Click="Button_Historique_Click"/>
+        <Image HorizontalAlignment="Left" Height="83" Margin="219,416,0,0" VerticalAlignment="Top" Width="73" Source="/icons8-list-64.png" RenderTransformOrigin="0.546,1.103" IsHitTestVisible="False"/>
+        <Button Content="&#xA;&#xD;&#xA;MISE A JOUR" HorizontalAlignment="Left" Margin="532,215,0,0" VerticalAlignment="Top" Height="150" Width="400" Background="#FF007791" BorderBrush="White" BorderThickness="6,6,6,6" FontFamily="Arial Narrow" FontSize="30" FontWeight="Bold" Foreground="White" Click="Button_Maj_Click"/>
+        <Image HorizontalAlignment="Left" Height="83" Margin="696,237,0,0" VerticalAlignment="Top" Width="72" Source="/icons8-refresh-480.png" RenderTransformOrigin="0.546,1.103" IsHitTestVisible="False"/>
+        <Button Content="&#xA;&#xD;&#xA;SITE WEB" HorizontalAlignment="Left" Margin="532,398,0,0" VerticalAlignment="Top" Height="150" Width="400" Background="#FF007791" BorderBrush="White" BorderThickness="6,6,6,6" FontFamily="Arial Narrow" FontSize="30" FontWeight="Bold" Foreground="White" Click="Button_Site_Click"/>
+        <Image HorizontalAlignment="Left" Height="83" Margin="696,417,0,0" VerticalAlignment="Top" Width="72" Source="/icons8-website-100.png" RenderTransformOrigin="0.546,1.103" IsHitTestVisible="False"/>
+
+
+        <!-- footer -->
+        <Rectangle HorizontalAlignment="Center" Height="100" Stroke="Black" VerticalAlignment="Top" Width="1000" Fill="#FF007791" Margin="0,584,0,0" StrokeThickness="0"/>
+        <Label Content="Copyright 2021 - Alexia" HorizontalAlignment="Center" Margin="0,591,0,0" VerticalAlignment="Top" Foreground="Black" FontFamily="Arial Narrow" FontSize="22" FontWeight="Normal" FontStyle="Normal" HorizontalContentAlignment="Center"/>
+        <Rectangle HorizontalAlignment="Center" Height="50" Stroke="Black" VerticalAlignment="Top" Width="1000" Fill="#FFE45621" Margin="0,634,0,0" StrokeThickness="0" Visibility="Hidden"/>
+        <Label x:Name="actu" Content="Copyright 2021 - Alexia" HorizontalAlignment="Center" Margin="0,641,0,0" VerticalAlignment="Top" Foreground="Black" FontFamily="Arial Narrow" FontSize="22" FontWeight="Normal" FontStyle="Normal" HorizontalContentAlignment="Center" Visibility="Hidden"/>
+
+
+    </Grid>
+</Window>
